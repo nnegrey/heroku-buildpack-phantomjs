@@ -9,7 +9,7 @@ CACHE_DIR=$2
 VERSION="1.4.1"
 
 # Buildpack URL
-ARCHIVE_NAME=phantomjs-${VERSION}-linux-x86_64
+ARCHIVE_NAME=phantomjs--linux-x86_64
 FILE_NAME=${ARCHIVE_NAME}.tar.bz2
 # BUILDPACK_PHANTOMJS_PACKAGE=https://github.com/ariya/phantomjs/archive/${FILE_NAME}
 BUILDPACK_PHANTOMJS_PACKAGE=http://www.ryanbridges.org/downloads/phantomjs/phantomjs--linux-x86_64.tar.bz2
