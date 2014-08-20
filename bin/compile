@@ -23,9 +23,10 @@ fi
 echo "-----> Extracting PhantomJS ${VERSION} binaries to ${BUILD_DIR}/vendor/phantomjs"
 mkdir -p $CACHE_DIR/$ARCHIVE_NAME
 mkdir -p $BUILD_DIR/vendor
-echo "-----> gunzip --to-stdout ${CACHE_DIR}/${FILE_NAME} | bzip2 > ${CACHE_DIR}/${ARCHIVE_NAME}.tar.bz2"
-gunzip --to-stdout $CACHE_DIR/$FILE_NAME | bzip2 > ${CACHE_DIR}/${ARCHIVE_NAME}.tar.bz2
-tar jxf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR
+# echo "-----> gunzip --to-stdout ${CACHE_DIR}/${FILE_NAME} | bzip2 > ${CACHE_DIR}/${ARCHIVE_NAME}.tar.bz2"
+# gunzip --to-stdout $CACHE_DIR/$FILE_NAME | bzip2 > ${CACHE_DIR}/${ARCHIVE_NAME}.tar.bz2
+echo "-----> tar -zxvf ${CACHE_DIR}/${FILE_NAME} -C ${CACHE_DIR}"
+tar -zxvf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR
 
 echo "-----> mv ${CACHE_DIR}/${ARCHIVE_NAME} ${BUILD_DIR}/vendor/phantomjs"
 mv $CACHE_DIR/$ARCHIVE_NAME $BUILD_DIR/vendor/phantomjs
